@@ -1,0 +1,11 @@
+-- "Fixar GO": permite marcar o valor de GO da simulação como definitivo (não só o último arrastado no
+-- slider), com um badge visível para a equipa interna saber o que foi decidido. O Documento Interno
+-- continua a usar simulations.go_override em qualquer dos casos (é sempre o valor gravado, fixado ou
+-- não) — esta coluna é só o estado de fixação, para a UI (badge "GO fixado: X", slider bloqueado).
+--
+-- NOTA: este ficheiro ainda NÃO foi aplicado (Supabase por reautorizar nesta sessão) e o código que o
+-- usaria (SimulationNewPage: botão "Fixar GO", badge, bloqueio do slider; duplicar: copiar o estado)
+-- também não foi escrito ainda — exatamente para não referenciar em produção uma coluna inexistente
+-- (o que partiria a gravação de QUALQUER simulação, não só as que usam GO). Aplicar com
+-- mcp__supabase__apply_migration assim que a ligação for reautorizada, e só depois ligar o código.
+alter table public.simulations add column go_fixado boolean not null default false;
