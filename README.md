@@ -51,11 +51,9 @@ docs/            design notes
 | 🟪 | `.claude/` and `.agents/` | Sub-agents and agent skills used during development |
 | ⬜ | `docs/`, `public/`, root files | Design notes, assets, Vite and TypeScript configuration |
 
-<!-- Demo: add your screenshots to docs/screenshots/ and uncomment.
 ## Demo
-![Home](docs/screenshots/home.png)
-[Watch the video](https://youtu.be/...)
--->
+
+[Watch the 1-minute demo video](https://youtu.be/ygvSo78hwfU)
 
 ## Run locally
 
